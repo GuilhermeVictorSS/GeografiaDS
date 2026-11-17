@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Italianno&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+}
+#topbar{
+    z-index: 100;
+    position: fixed;
+    width: 94%;
+    display: flex;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.113);
+    border-radius: 20px;
+    padding: 1%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.561);
+    align-items: center;
+    justify-content: center;
+    column-gap: 10%;
+    flex-wrap: wrap;
+}
+.itemsbar{
+    color: rgb(255, 255, 255);
+    padding-left: 1%;
+    padding-right: 1%;
+    text-shadow: 0 0 5px black;
+    transition: all 0.5s ease;
+}
+.itemsbar:hover{
+    transform: scale(1.2);
+}
+a, a:active, a:hover, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+#imgcontainer{
+    transform: translateY(-10vh);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#imgbg{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    transition: all 1s ease;
+}
+#imgbg:hover{
+    transform: translateY(-7px) scale(1.02);
+}
+#fixarea{
+    height: 100vh;
+    overflow: hidden;
+}
+#fixit{
+    padding: 2%;
+}
+#bbhbogle{
+    font-family: "BBH Bogle", sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+
+#italianno{
+    font-family: "Italianno", cursive;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: -4px;
+}
+
+#area1{
+    padding-left: 7%;
+    padding-right: 7%;
+    transform: translateY(-100px);
+}
+#title{
+    padding-right: 30%;
+    padding-left: 2%;
+    line-height: 0.8;
+}
+p {
+    font-size: 1.6rem;
+}
+#toright{
+    text-align: right;
+    padding-left: 40%;
+    padding-right: 4%;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(-120px);
+  }
+  50% {
+    transform: translateY(-110px); 
+  }
+}
+#gallery {
+    width: 100%;
+    overflow: hidden;
+}
+marquee{
+    -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 25%,
+    black 75%,
+    transparent 100%
+    );
+    height: 320px;
+}
+#marq{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    column-gap: 2%;
+}
+
+.itemMarq{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.57);
+    border-radius: 80px;
+}
+.imgMarq{
+    object-fit: cover;
+    height: 300px;
+    width: 600px;
+    display: block;
+    margin: auto;
+    border-radius: 80px;
+    filter: grayscale(1) brightness(0.4);
+}
+.txtBox{
+    transform: translateY(-350px);
+    transition: all 1s ease-in-out;
+    height: 100vw;
+    text-align: center;
+    opacity: 0;
+    color: white;
+}
+.txtBox:hover {
+    transform: translateY(-315px);
+    opacity: 1;
+}
+.txtBox>h1,p{
+    letter-spacing: -1px;
+}
+.anime{
+     opacity: 1; /* Evita piscar antes de iniciar */
+     animation: toDown 4.5s ease-out forwards;
+}
+@keyframes toDown {
+  from {
+    opacity: 0;
+    transform: translateY(-180px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
