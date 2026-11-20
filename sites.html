@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Bebas+Neue&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Italianno&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+.bbhbogle{
+    font-family: "BBH Bogle", sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.italianno{
+    font-family: "Italianno", cursive;
+    font-weight: normal;
+    font-style: italic;
+    letter-spacing: -4px;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 3rem;
+    align-items: center;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font-size: 1rem;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 30%, white);
+}
+@keyframes blurry {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+#title{
+    line-height: 1rem;
+    letter-spacing: 0px;
+    text-shadow: 0 0px 10px rgba(255, 255, 255, 0.63);
+    z-index: 100;
+    font-family: "BBH Bogle", sans-serif;
+    font-style: italic;
+    font-size: 3rem;
+    animation: blurry 1.5s ease-out forwards;
+    color: white;
+}
+iframe{
+    width: 75vw;
+    height: 75vh;
+    display: block;
+    margin: auto;
+    -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 25%,
+    black 75%,
+    transparent 100%
+    );
+    border: 0;
+    border-radius: 100px;
+    box-shadow: 0 10px 15px black;
+}
+#topbar{
+    z-index: 1000;
+    position: fixed;
+    width: 94%;
+    display: flex;
+    margin-top: 2%;
+    margin-left: 2%;
+    border: 1px solid rgba(255, 255, 255, 0.113);
+    border-radius: 20px;
+    padding: 1%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.06);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.561);
+    align-items: center;
+    justify-content: center;
+    column-gap: 10%;
+    flex-wrap: wrap;
+}
+.itemsbar{
+    color: rgb(255, 255, 255);
+    padding-left: 1%;
+    padding-right: 1%;
+    text-shadow: 0 0 5px black;
+    transition: all 0.5s ease;
+}
+.itemsbar:hover{
+    transform: scale(1.2);
+}
+a, a:active, a:hover, a:visited {
+    text-decoration: none;
+    color: black;
+}
+#container{
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4%;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.item{
+    font-family: "Bebas Neue", cursive;
+    width: 20vw;
+    height: 30vh;
+    font-size: 0.9rem;
+    background-image: linear-gradient(to bottom,black, rgba(0, 0, 0, 0.82) 60%, rgba(0, 0, 0, 0.064));
+    justify-content: center;
+    line-height: 1.3rem;
+    border-radius: 70px;
+    overflow: hidden;
+    word-break: break-all;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.694);
+    transition: all 0.7s ease;
+    animation: blurry 1.5s ease-out forwards;
+}
+.txtitem>h1{
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    font-family: "Lobster", cursive;
+    font-size: 1.6rem;
+}
+.item:hover{
+    transform: translateY(-15px);
+}
+.txtitem{
+    text-align: center;
+}
+a, a:hover, a:active, a:visited{
+    color: white;
+}
+#imgcontainer{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#imgbg{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
+    transition: all 1s ease;
+    animation: blurry 1.5s ease-out forwards;
+}
+#imgbg:hover{
+    transform: translateY(-7px) scale(1.02);
+}
+</style>
+<body>
+    <header id="topbar">
+        <a href="index.html">
+            <div class="itemsbar" style="margin-right: 80px;">
+                <b>Início</b>
+            </div>
+        </a>
+        <a href="">
+            <div class="itemsbar">
+                Sites
+            </div>
+        </a>
+        <a target="_blank" href="https://drive.google.com/drive/folders/1xCzLubbtzpUIUjtzsYpeNrtyB8dIYIaDuv_-OVgGkXpk07hGn5N80lmgsxO2fZge4AimM36M?usp=drive_link">
+            <div class="itemsbar">
+                Slides
+            </div>
+        </a>
+        <a href="index.html">
+            <div class="itemsbar">
+                Alunos
+            </div>
+        </a>
+    </header>
+    <div id="imgcontainer">
+        <img id="imgbg" src="sitesbg3.jpg">
+    </div>
+
+    <span id="title">
+        <h1 style="text-align: center;">SITES DE <span class="italianno" style="font-size: 10rem;">Geografia </span> DE DS.</h1>
+    </span>
+    <br>
+    <br>
+    <br>
+    <div id="container">
+        <!--ITEM-->
+        <div class="item">
+            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+                <div class="txtitem">
+                    <h1>Domínio Amazônico</h1>
+                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                </div>
+            </a>
+            <div class="txtitem">
+                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
+                        <h1>&nbsp;🔍︎</h1>
+                        <p>Arraste para visualizar prévia</p>
+                </a>
+            </div>
+        </div>
+        <!--ITEM-->
+        <div class="item">
+            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+                <div class="txtitem">
+                    <h1>Domínio Amazônico</h1>
+                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                </div>
+            </a>
+            <div class="txtitem">
+                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
+                        <h1>&nbsp;🔍︎</h1>
+                        <p>Arraste para visualizar prévia</p>
+                </a>
+            </div>
+        </div>
+        <!--ITEM-->
+        <div class="item">
+            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+                <div class="txtitem">
+                    <h1>Domínio Amazônico</h1>
+                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                </div>
+            </a>
+            <div class="txtitem">
+                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
+                        <h1>&nbsp;🔍︎</h1>
+                        <p>Arraste para visualizar prévia</p>
+                </a>
+            </div>
+        </div>
+        <!--ITEM-->
+        <div class="item">
+            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+                <div class="txtitem">
+                    <h1>Domínio Amazônico</h1>
+                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                </div>
+            </a>
+            <div class="txtitem">
+                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
+                        <h1>&nbsp;🔍︎</h1>
+                        <p>Arraste para visualizar prévia</p>
+                </a>
+            </div>
+        </div>
+        <!--ITEM-->
+        <div class="item">
+            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+                <div class="txtitem">
+                    <h1>Domínio Amazônico</h1>
+                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                </div>
+            </a>
+            <div class="txtitem">
+                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
+                    <h1>&nbsp;🔍︎</h1>
+                    <p>Arraste para visualizar prévia</p>
+                </a>
+            </div>
+        </div>
+        <!--ITEM-->
+        <div class="item">
+            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+                <div class="txtitem">
+                    <h1>Domínio Amazônico</h1>
+                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                </div>
+            </a>
+            <div class="txtitem">
+                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
+                        <h1>&nbsp;🔍︎</h1>
+                        <p>Arraste para visualizar prévia</p>
+                </a>
+            </div>
+        </div>
+        <!--ITEM-->
+        <div class="item">
+            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+                <div class="txtitem">
+                    <h1>Domínio Amazônico</h1>
+                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                </div>
+            </a>
+            <div class="txtitem">
+                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
+                        <h1>&nbsp;🔍︎</h1>
+                        <p>Arraste para visualizar prévia</p>
+                </a>
+            </div>
+        </div>
+        <!--ITEM-->
+        <div class="item">
+            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+                <div class="txtitem">
+                    <h1>Domínio Amazônico</h1>
+                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                </div>
+            </a>
+            <div class="txtitem">
+                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
+                        <h1>&nbsp;🔍︎</h1>
+                        <p>Arraste para visualizar prévia</p>
+                </a>
+            </div>
+        </div>
+        <!--ITEM-->
+        <div class="item">
+            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+                <div class="txtitem">
+                    <h1>Domínio Amazônico</h1>
+                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                </div>
+            </a>
+            <div class="txtitem">
+                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
+                        <h1>&nbsp;🔍︎</h1>
+                        <p>Arraste para visualizar prévia</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <figure>
+        <iframe src="default.html" name="content"></iframe>
+    </figure>
+</body>
+</html>

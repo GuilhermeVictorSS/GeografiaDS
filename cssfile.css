@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Bebas+Neue&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Italianno&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 1rem;
     font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
 }
 #topbar{
     z-index: 100;
@@ -35,11 +39,11 @@ body{
 }
 a, a:active, a:hover, a:visited {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 #imgcontainer{
-    transform: translateY(-10vh);
+    transform: translateY(-6.5vw);
     height: 100%;
     width: 100%;
     position: relative;
@@ -199,9 +203,9 @@ marquee{
     filter: brightness(0.9);
 }
 .txtpf{
-    width: 60%;
+    width: 20vw;
     height: 90%;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.949) 30%, rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.949) 30%, transparent 90%);
     border-radius: 30px;
     transform: translateY(-60px);
     z-index: 100;
@@ -246,8 +250,66 @@ marquee{
     height: 80px;
     width: 80px;
     border-radius: 100px;
-    transform: translate(23vw,-41vh);
+    transform: translate(24vw,-39vh);
     z-index: 1000;
     overflow: hidden;
     box-shadow: 0 10px 15px black;
 }
+
+/* MODO ESCUROXXXXXXXXXXXXXXXXX */
+body.escuro {
+    background-color: #121212;
+    color: #eaeaea;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body.escuro #area2 {
+    background-image: linear-gradient(to bottom, #121212 10%, rgb(38, 38, 38) 80%, black 100%);
+}
+
+body.escuro #topbar {
+    background-color: rgba(0, 0, 0, 0.35);
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.escuro #imgbg {
+    filter:brightness(0.7);
+}
+
+body.escuro .itemMarq, body.escuro .itempf {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+#btn-tema {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    padding: 12px 22px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#btn-tema:hover {
+    transform: scale(1.1)
+}
+
+#btn-tema:active{
+    transform: scale(0.95)
+}
+
+body.escuro #btn-tema{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
