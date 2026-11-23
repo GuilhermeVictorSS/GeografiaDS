@@ -12,7 +12,24 @@
     font-weight: normal;
     font-style: italic;
 }
-
+#imgcontainer{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+#imgbg{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
+    transition: all 1s ease;
+    animation: blurry 1.5s ease-out forwards;
+}
+#imgbg:hover{
+    transform: translateY(-7px) scale(1.02);
+}
 .italianno{
     font-family: "Italianno", cursive;
     font-weight: normal;
@@ -140,24 +157,7 @@ a, a:active, a:hover, a:visited {
 a, a:hover, a:active, a:visited{
     color: white;
 }
-#imgcontainer{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-#imgbg{
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    -webkit-mask-image: linear-gradient(to bottom, black 100%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
-    transition: all 1s ease;
-    animation: blurry 1.5s ease-out forwards;
-}
-#imgbg:hover{
-    transform: translateY(-7px) scale(1.02);
-}
+
 </style>
 <body>
     <header id="topbar">
