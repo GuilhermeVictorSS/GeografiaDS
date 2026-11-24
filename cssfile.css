@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Bebas+Neue&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Italianno&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+	--time-time: 1.5s
+}
 html{
     scroll-behavior: smooth;
 }
@@ -9,6 +12,7 @@ body{
     font-size: 1rem;
     font-family: "Open Sans", sans-serif;
     overflow-x: hidden;
+	transition: all var(--time-time) ease;
 }
 #topbar{
     z-index: 100;
@@ -32,10 +36,11 @@ body{
     padding-left: 1%;
     padding-right: 1%;
     text-shadow: 0 0 5px black;
-    transition: all 0.5s ease;
+	transition: all 0.75s ease;
 }
 .itemsbar:hover{
     transform: scale(1.2);
+	transition: all 0.75s ease;
 }
 a, a:active, a:hover, a:visited {
     text-decoration: none;
@@ -55,7 +60,7 @@ a, a:active, a:hover, a:visited {
     height: 100%;
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-    transition: all 1s ease;
+	transition: all 1.0s ease;
 }
 #imgbg:hover{
     transform: translateY(-7px) scale(1.02);
@@ -84,11 +89,13 @@ a, a:active, a:hover, a:visited {
     padding-left: 7%;
     padding-right: 7%;
     transform: translateY(-100px);
+	transition: all 1.5s ease;
 }
 #title{
     padding-right: 30%;
     padding-left: 2%;
     line-height: 0.8;
+	transition: all 1s ease;
 }
 p {
     font-size: 1.6rem;
@@ -134,6 +141,7 @@ marquee{
     position: relative;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.57);
     border-radius: 80px;
+	transition: all 1s ease;
 }
 .imgMarq{
     object-fit: cover;
@@ -143,6 +151,7 @@ marquee{
     margin: auto;
     border-radius: 80px;
     filter: grayscale(1) brightness(0.4);
+	transition: all 1s ease;
 }
 .txtBox{
     transform: translateY(-350px);
@@ -173,8 +182,15 @@ marquee{
     transform: translateY(0);
   }
 }
+@property --cor-topo {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #ff5733;
+}
 #area2 {
-    background-image: linear-gradient(to bottom, white 10%, rgb(38, 38, 38)80%, black 100%);
+	--cor-topo: white;
+    background-image: linear-gradient(to bottom, var(--cor-topo) 10%, rgb(38, 38, 38)80%, black 100%);
+	transition: --cor-topo var(--time-time) ease;	
 }
 #container{
     justify-content: center;
@@ -259,25 +275,30 @@ marquee{
 /* MODO ESCUROXXXXXXXXXXXXXXXXX */
 body.escuro {
     background-color: #121212;
-    color: #eaeaea;
-    transition: background-color 0.5s ease, color 0.5s ease;
+    color: white;
+    transition: all var(--time-time) ease;
 }
 
 body.escuro #area2 {
-    background-image: linear-gradient(to bottom, #121212 10%, rgb(38, 38, 38) 80%, black 100%);
+    --cor-topo: #121212;
+    background-image: linear-gradient(to bottom, var(--cor-topo) 10%, rgb(38, 38, 38)80%, black 100%);
+	transition: --cor-topo var(--time-time) ease;	
 }
 
 body.escuro #topbar {
     background-color: rgba(0, 0, 0, 0.35);
     border-color: rgba(255, 255, 255, 0.08);
+	transition: all var(--time-time) ease;
 }
 
 body.escuro #imgbg {
     filter:brightness(0.7);
+	transition: all var(--time-time) ease;
 }
 
 body.escuro .itemMarq, body.escuro .itempf {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+	transition: all var(--time-time) ease;
 }
 
 #btn-tema {
@@ -296,7 +317,7 @@ body.escuro .itemMarq, body.escuro .itempf {
     border-radius: 20px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all var(--time-time) ease;
 }
 
 #btn-tema:hover {
@@ -311,5 +332,127 @@ body.escuro #btn-tema{
     color: black;
     background-color: rgba(255, 255, 255, 0.85);
     border-color: rgba(0, 0, 0, 0.2);
+	transition: all var(--time-time) ease;
 }
+
+body.escuro #title{
+	color: white;
+	transition: all var(--time-time) ease;
+}
+
+/* CELULARXXXXXXXXXXXXX */
+@media (max-width: 768px) {
+
+    #topbar {
+        width: auto;
+        left: 3%;
+        right: 3%;
+        box-sizing: border-box;
+        column-gap: 1rem;
+        padding: 10px;
+    }
+    .itemsbar[style] { margin-right: 0 !important; }
+
+    #imgcontainer {
+        transform: none;
+        height: 260px;
+    }
+
+    #area1 {
+        padding: 0 5%;
+        transform: translateY(-30px);
+    }
+    #title {
+        padding: 0;
+        text-align: center;
+    }
+    #area1 #bbhbogle { font-size: 1.5rem !important; }
+    #italianno       { font-size: 3.5rem !important; }
+    #toright {
+        padding: 0 5%;
+        text-align: center;
+    }
+    p { font-size: 1.1rem; }
+
+    #gallery h1 {
+        transform: none !important;
+        font-size: 1.8rem !important;
+        text-align: center !important;
+    }
+
+    marquee { height: 200px; }
+    #marq   { width: max-content; height: 180px; }
+    .itemMarq {
+        width: 300px;
+        flex: none;
+        border-radius: 30px;
+    }
+    .imgMarq {
+        width: 300px;
+        height: 180px;
+        border-radius: 30px;
+    }
+    .txtBox {
+        position: absolute;
+        inset: 0;
+        transform: none;
+        height: auto;
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: 30px;
+    }
+    .txtBox:hover { transform: none; }
+    .txtBox h1 { font-size: 1.1rem; margin: 0; }
+    .txtBox p  { font-size: 0.85rem; margin: 0.2rem 0 0; }
+
+    #area2 #bbhbogle { font-size: 0.9rem !important; }
+    #floating h1     { line-height: 1.2 !important; }
+
+    .itempf {
+        position: relative;
+        width: 90vw;
+        height: 220px;
+    }
+    .itempf > img {
+        position: absolute;
+        inset: 0;
+    }
+    .txtpf {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 70%;
+        height: auto;
+        transform: none;
+        box-sizing: border-box;
+        padding: 0 1rem;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .txtpf > p { opacity: 1; }
+    .icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .icon > img {
+        transform: none;
+        width: 56px;
+        height: 56px;
+    }
+    #imgbg {
+        object-position: left center;
+    }
+}
+
+
+
+
+
+
+
 
