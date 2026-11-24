@@ -61,7 +61,7 @@ a, a:active, a:hover, a:visited {
     -webkit-mask-image: linear-gradient(
     to bottom,
     transparent 0%,
-    black 15%,
+    black 25%,
     black 85%,
     transparent 100%
     );
