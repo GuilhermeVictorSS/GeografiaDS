@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sites</title>
+    <title>Sites Geo 1°DS</title>
 </head>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Bebas+Neue&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Italianno&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
@@ -67,21 +67,42 @@ body{
     animation: blurry 1.5s ease-out forwards;
     color: white;
 }
-iframe{
-    width: 75vw;
-    height: 75vh;
-    display: block;
-    margin: auto;
-    -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 25%,
-    black 75%,
-    transparent 100%
-    );
-    border: 0;
-    border-radius: 100px;
-    box-shadow: 0 10px 15px black;
+#preview {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 2000;
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.85);
+	backdrop-filter: blur(6px);
+}
+#preview.aberto {
+	display: flex;
+}
+#preview iframe {
+	width: 92vw;
+	height: 92vh;
+	border: 0;
+	border-radius: 25px;
+	background: white;
+	box-shadow: 0 10px 30px black;
+	-webkit-mask-image: none;
+	mask-image: none;
+}
+#fechar {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 44px;
+	height: 44px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.15);
+	color: white;
+	font-size: 1.3rem;
+	cursor: pointer;
 }
 #topbar{
     z-index: 1000;
@@ -157,6 +178,82 @@ a, a:active, a:hover, a:visited {
 a, a:hover, a:active, a:visited{
     color: white;
 }
+/* CELULARXXXXXXXXXXXXX */
+@media (max-width: 768px) {
+
+    #topbar {
+        width: auto;
+        margin: 0;
+        top: 2%;
+        left: 3%;
+        right: 3%;
+        box-sizing: border-box;
+        column-gap: 1rem;
+        padding: 10px;
+    }
+    .itemsbar[style] { margin-right: 0 !important; }
+
+    #imgcontainer { height: 220px; }
+
+    #title { font-size: 1.2rem; }
+    #title h1 { line-height: 1.2; }
+    .italianno { font-size: 3.5rem !important; }
+
+    #container { padding: 0 5%; }
+    .item {
+        width: 85vw;
+        height: auto;
+        min-height: 200px;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        border-radius: 40px;
+        word-break: normal;
+    }
+
+	#preview {
+		display: none;
+		position: fixed;
+		inset: 0;
+		z-index: 2000;
+		margin: 0;
+		align-items: center;
+		justify-content: center;
+		background: rgba(0, 0, 0, 0.85);
+		backdrop-filter: blur(6px);
+	}
+	#preview.aberto {
+		display: flex;
+	}
+	#preview iframe {
+		width: 92vw;
+		height: 90vh;
+		border: 0;
+		border-radius: 25px;
+		background: white;
+		box-shadow: 0 10px 30px black;
+		-webkit-mask-image: none;
+		mask-image: none;
+	}
+	#fechar {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		width: 44px;
+		height: 44px;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.15);
+		color: white;
+		font-size: 1.3rem;
+		cursor: pointer;
+	}
+	
+	#imgbg {
+        object-position: right center;
+    }
+}
 
 </style>
 <body>
@@ -204,7 +301,7 @@ a, a:hover, a:active, a:visited{
             <div class="txtitem">
                 <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
                         <h1>&nbsp;🔍︎</h1>
-                        <p>Arraste para visualizar prévia</p>
+                        <p>Visualizar Prévia</p>
                 </a>
             </div>
         </div>
@@ -219,7 +316,7 @@ a, a:hover, a:active, a:visited{
             <div class="txtitem">
                 <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
                         <h1>&nbsp;🔍︎</h1>
-                        <p>Arraste para visualizar prévia</p>
+                        <p>Visualizar Prévia</p>
                 </a>
             </div>
         </div>
@@ -234,7 +331,7 @@ a, a:hover, a:active, a:visited{
             <div class="txtitem">
                 <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
                         <h1>&nbsp;🔍︎</h1>
-                        <p>Arraste para visualizar prévia</p>
+                        <p>Visualizar Prévia</p>
                 </a>
             </div>
         </div>
@@ -249,7 +346,7 @@ a, a:hover, a:active, a:visited{
             <div class="txtitem">
                 <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
                         <h1>&nbsp;🔍︎</h1>
-                        <p>Arraste para visualizar prévia</p>
+                        <p>Visualizar Prévia</p>
                 </a>
             </div>
         </div>
@@ -264,7 +361,7 @@ a, a:hover, a:active, a:visited{
             <div class="txtitem">
                 <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
                     <h1>&nbsp;🔍︎</h1>
-                    <p>Arraste para visualizar prévia</p>
+                    <p>Visualizar Prévia</p>
                 </a>
             </div>
         </div>
@@ -279,7 +376,22 @@ a, a:hover, a:active, a:visited{
             <div class="txtitem">
                 <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
                         <h1>&nbsp;🔍︎</h1>
-                        <p>Arraste para visualizar prévia</p>
+                        <p>Visualizar Prévia</p>
+                </a>
+            </div>
+        </div>
+        <!--ITEM-->
+        <div class="item">
+            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+                <div class="txtitem">
+                    <h1>Domínio Amazônico</h1>
+                    <p>Visualizar Prévia</p>
+                </div>
+            </a>
+            <div class="txtitem">
+                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
+                        <h1>&nbsp;🔍︎</h1>
+                        <p>Visualizar Prévia</p>
                 </a>
             </div>
         </div>
@@ -294,7 +406,7 @@ a, a:hover, a:active, a:visited{
             <div class="txtitem">
                 <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
                         <h1>&nbsp;🔍︎</h1>
-                        <p>Arraste para visualizar prévia</p>
+                        <p>Visualizar Prévia</p>
                 </a>
             </div>
         </div>
@@ -309,29 +421,17 @@ a, a:hover, a:active, a:visited{
             <div class="txtitem">
                 <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
                         <h1>&nbsp;🔍︎</h1>
-                        <p>Arraste para visualizar prévia</p>
-                </a>
-            </div>
-        </div>
-        <!--ITEM-->
-        <div class="item">
-            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
-                <div class="txtitem">
-                    <h1>Domínio Amazônico</h1>
-                    <p>DEVs:Dudu, Cheetos & Yago</p>
-                </div>
-            </a>
-            <div class="txtitem">
-                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
-                        <h1>&nbsp;🔍︎</h1>
-                        <p>Arraste para visualizar prévia</p>
+                        <<p>Visualizar Prévia</p>
                 </a>
             </div>
         </div>
     </div>
     <br>
-    <figure>
-        <iframe src="default.html" name="content"></iframe>
-    </figure>
+	<figure id="preview">
+		<button id="fechar" aria-label="Fechar prévia">✕</button>
+		<iframe name="content" title="Prévia do site"></iframe>
+	</figure>
+	
+	<script src="javascript.js"></script>
 </body>
 </html>
