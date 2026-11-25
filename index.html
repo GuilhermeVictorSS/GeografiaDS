@@ -11,22 +11,22 @@
         <header id="topbar">
             <a href="#area1">
                 <div class="itemsbar" style="margin-right: 80px;">
-                    <b>Início</b>
+                    <b id="inicio">Início</b>
                 </div>
             </a>
             <a href="sites.html">
                 <div class="itemsbar">
-                    Sites
+                    <span id="sites">Sites</span>
                 </div>
             </a>
             <a target="_blank" href="https://drive.google.com/drive/folders/1xCzLubbtzpUIUjtzsYpeNrtyB8dIYIaDuv_-OVgGkXpk07hGn5N80lmgsxO2fZge4AimM36M?usp=drive_link">
                 <div class="itemsbar">
-                    Slides
+                    <span id="slides">Slides</span>
                 </div>
             </a>
             <a href="#area2">
                 <div class="itemsbar">
-                    Alunos
+                    <span id="alunos">Alunos</span>
                 </div>
             </a>
         </header>
@@ -37,7 +37,7 @@
     <section id="area1">
         <span id="bbhbogle" style="font-size: 3.2rem;">
             <div id="title">
-                <h1 class="anime">&emsp;BEM VINDO AO SITE DE <span id="italianno" style="font-size: 10rem;">Geografia</span>&nbsp; DE DS!</h1>
+                <h1 class="anime">BEM VINDO AO SITE DE <span id="italianno" style="font-size: 10rem;">Geografia</span>&nbsp; DE DS!</h1>
             </div>
         </span>
         <div id="toright">
@@ -47,12 +47,20 @@
     <section id="gallery">
         <!--Sites-->
         <span id="bbhbogle">
-            <a href="sites.html">
+            <a id="sitesA" href="sites.html">
                 <h1 id="title" style="transform: translateX(200px); font-size: 3rem;">Ver Sites&emsp;></h1>
             </a>
         </span>
         <marquee behavior="alternate" direction="right" scrollamount="3">
         <div id="marq">
+            <!--ITEM SITE-->
+            <div class="itemMarq">
+                <img class="imgMarq" src="imgsite/Cerrado.PNG">
+                <div class="txtBox">
+                    <h1>Cerrado</h1>
+                    <p>DEVs: Luís F., Pedro H.N.A, </p><p>Marcos, Ryan, Gustavo Cruz,</p><p> Gabriel G., Murilo</p>
+                </div>
+            </div>
             <!--ITEM SITE-->
             <div class="itemMarq">
                 <img class="imgMarq" src="imgsite/DominioAmazonico.png">
@@ -63,13 +71,14 @@
             </div>
             <!--ITEM SITE-->
             <div class="itemMarq">
-                <img class="imgMarq" src="imgsite/DominioAmazonico.png">
+                <img class="imgMarq" src="imgsite/Mares de Morros.PNG">
                 <div class="txtBox">
-                    <h1>Domínio Amazônico</h1>
-                    <p>DEVs: Dudu, Yago & Xisto</p>
+                    <h1>Mares de Morros</h1>
+                    <p>DEVs: Camille Veloso, Gabriel Moura,</p><p> Maryane Vitória, Miqueias Lima</p><p> e Sophia Silva</p>
                 </div>
+            </div>
             <!--ITEM SITE-->
-            </div><div class="itemMarq">
+            <div class="itemMarq">
                 <img class="imgMarq" src="imgsite/DominioAmazonico.png">
                 <div class="txtBox">
                     <h1>Domínio Amazônico</h1>
@@ -88,7 +97,7 @@
         </marquee>
         <br><!--Slides-->
         <span id="bbhbogle">
-            <a target="_blank" href="https://drive.google.com/drive/folders/1xCzLubbtzpUIUjtzsYpeNrtyB8dIYIaDuv_-OVgGkXpk07hGn5N80lmgsxO2fZge4AimM36M?usp=drive_link">
+            <a id="slidesA" target="_blank" href="https://drive.google.com/drive/folders/1xCzLubbtzpUIUjtzsYpeNrtyB8dIYIaDuv_-OVgGkXpk07hGn5N80lmgsxO2fZge4AimM36M?usp=drive_link">
                 <h1 id="title" style="transform: translateX(250px); font-size: 3rem; text-align: right;"><&emsp; Ver Slides</h1>
             </a>
         </span>
@@ -133,7 +142,7 @@
     <section id="area2">
         <!--Perfil-->
             <span id="bbhbogle" style="font-size: 3rem; text-align: center;">
-                <div id="floating"><h1 style="text-shadow: 0 5px 10px rgba(0, 0, 0, 0.537);line-height: 4.4rem;">ALUNOS DE <span id="italianno" style="font-size: 10rem;">Desenvolvimento</span> de sistemas</h1></div>
+                <div id="floating"><h1 style="text-shadow: 0 5px 10px rgba(0, 0, 0, 0.537);line-height: 4.4rem;">ALUNOS DE <span id="italianno" style="font-size: 10rem;"><span id="alunosA"> Desenvolvimento</span></span> de sistemas</h1></div>
             </span>
             <div id="container">
                 <!--ITEM PERFIL-->

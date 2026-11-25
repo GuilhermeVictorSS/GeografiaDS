@@ -22,8 +22,13 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 10%, transparent 100%);
+    -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 25%,
+    black 65%,
+    transparent 100%
+    );
     transition: all 1s ease;
     animation: blurry 1.5s ease-out forwards;
 }
@@ -44,7 +49,7 @@ body{
     border: 0;
     margin: 0;
     font-size: 1rem;
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0) 30%, white);
+    background-image: linear-gradient(to bottom,rgb(73, 0, 0) 1%, rgb(0, 0, 0) 10%, rgb(69, 0, 0));
 }
 @keyframes blurry {
   from {
@@ -137,43 +142,44 @@ a, a:active, a:hover, a:visited {
     color: black;
 }
 #container{
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 1%;
+    padding-right: 1%;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 4%;
+    column-gap: 1%;
     gap: 20px;
     justify-content: center;
     align-items: center;
 }
 .item{
     font-family: "Bebas Neue", cursive;
-    width: 20vw;
-    height: 30vh;
+    width: 40vw;
+    height: 27vh;
     font-size: 0.9rem;
-    background-image: linear-gradient(to bottom,black, rgba(0, 0, 0, 0.82) 60%, rgba(0, 0, 0, 0.064));
+    background-image: linear-gradient(to bottom,rgb(255, 0, 0), rgba(255, 0, 0, 0.634), rgba(91, 0, 0, 0.478) 100%);
     justify-content: center;
     line-height: 1.3rem;
-    border-radius: 70px;
+    border-radius: 100px;
     overflow: hidden;
     word-break: break-all;
     padding-top: 15px;
     padding-left: 30px;
     padding-right: 30px;
-    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.694);
+    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.694);
     transition: all 0.7s ease;
     animation: blurry 1.5s ease-out forwards;
+    border: 1px solid white;
 }
 .txtitem>h1{
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    font-family: "Lobster", cursive;
+    text-shadow: 0 0 10px rgba(116, 116, 116, 0.146);
     font-size: 1.6rem;
 }
 .item:hover{
-    transform: translateY(-15px);
+    transform: scale(1.03);
 }
 .txtitem{
     text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.776);
 }
 a, a:hover, a:active, a:visited{
     color: white;
@@ -195,9 +201,9 @@ a, a:hover, a:active, a:visited{
 
     #imgcontainer { height: 220px; }
 
-    #title { font-size: 1.2rem; }
-    #title h1 { line-height: 1.2; }
-    .italianno { font-size: 3.5rem !important; }
+    #title { font-size: 2rem; }
+    #title h1 { line-height: 5rem; }
+    .italianno { font-size: 8rem !important; }
 
     #container { padding: 0 5%; }
     .item {
@@ -208,7 +214,7 @@ a, a:hover, a:active, a:visited{
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
-        border-radius: 40px;
+        border-radius: 70px;
         word-break: normal;
     }
 
@@ -284,7 +290,7 @@ a, a:hover, a:active, a:visited{
     </div>
 
     <span id="title">
-        <h1 style="text-align: center;">SITES DE <span class="italianno" style="font-size: 10rem;">Geografia </span> DE DS.</h1>
+        <h1 style="text-align: center;">SITES DE <span class="italianno" style="font-size: 10rem; color: red; text-shadow: 0 0 10px red;">Geografia </span> DE DS.</h1>
     </span>
     <br>
     <br>
@@ -300,8 +306,8 @@ a, a:hover, a:active, a:visited{
             </a>
             <div class="txtitem">
                 <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
-                        <h1>&nbsp;🔍︎</h1>
-                        <p>Visualizar Prévia</p>
+                    <h1>&nbsp;🔍︎</h1>
+                    <p>Visualizar Prévia</p>
                 </a>
             </div>
         </div>
