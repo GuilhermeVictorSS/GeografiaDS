@@ -15,7 +15,7 @@ body{
 	transition: all var(--time-time) ease;
 }
 #topbar{
-    z-index: 100;
+    z-index: 2000;
     position: fixed;
     width: 94%;
     display: flex;
@@ -79,7 +79,7 @@ a, a:active, a:hover, a:visited {
     black 65%,
     transparent 100%
     );
-	transition: all 1.0s ease;
+	transition: all 3s ease;
 }
 #imgbg:hover{
     transform: translateY(-7px) scale(1.02);
@@ -107,7 +107,7 @@ a, a:active, a:hover, a:visited {
 #area1{
     padding-left: 7%;
     padding-right: 7%;
-    transform: translateY(-100px);
+    transform: translateY(-10vh);
 	transition: all 1.5s ease;
 }
 #title{
@@ -198,6 +198,9 @@ marquee{
 }
 .txtBox>h1,p{
     letter-spacing: -1px;
+}
+.txtBox>p{
+    line-height: 0.8rem;
 }
 .anime{
      opacity: 1;
@@ -315,7 +318,27 @@ marquee{
     overflow: hidden;
     box-shadow: 0 10px 15px black;
 }
-
+#area3{
+    background-color: black;
+}
+#endCont{
+    display: flex;
+    padding-left: 1vw;
+    padding-right: 3vw;
+    color: white;
+    column-gap: 3vw;
+}
+#endTxt>p{
+    font-style: italic;
+}
+#endCont>img{
+    width: 30vw;
+    height: 30vw;
+    transition: all 0.7s ease;
+}
+#endCont>img:hover{
+    transform: rotate(2deg) scale(1.05);
+}
 /* MODO ESCUROXXXXXXXXXXXXXXXXX */
 body.escuro {
     background-color: #121212;
@@ -512,4 +535,22 @@ body.escuro #title{
 		font-size: 1.3rem;
 		line-height: 1.2;
 	}
+    #endCont{
+        display: block;
+        justify-content: center;
+        padding: 0 4vh 4vh 4vh;
+    }
+    #endTxt{
+        transform: translateY(-10vh);
+    }
+    #endTxt>h1, #endTxt>p{
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    #endCont>img{
+        width: 50vh;
+        height: 50vh;
+        display: block;
+        margin: auto;
+    }
 }

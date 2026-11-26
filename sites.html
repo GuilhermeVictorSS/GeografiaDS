@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sites Geo 1°DS</title>
+    <link rel="icon" href="geoIcon.png" type="image/x-icon">
 </head>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Bebas+Neue&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Italianno&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
@@ -17,6 +18,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    filter: saturate(2);
 }
 #imgbg{
     object-fit: cover;
@@ -29,8 +31,8 @@
     black 65%,
     transparent 100%
     );
-    transition: all 1s ease;
-    animation: blurry 1.5s ease-out forwards;
+    transition: all 3s ease;
+    animation: blurry 2s ease-out forwards;
 }
 #imgbg:hover{
     transform: translateY(-7px) scale(1.02);
@@ -40,6 +42,7 @@
     font-weight: normal;
     font-style: italic;
     letter-spacing: -4px;
+    z-index: 50;
 }
 body{
     font-family: "Open Sans", sans-serif;
@@ -61,10 +64,13 @@ body{
     opacity: 1;
   }
 }
+#forTitle{
+    padding:0 7% 0 7%;
+}
 #title{
     line-height: 1rem;
     letter-spacing: 0px;
-    text-shadow: 0 0px 10px rgba(255, 255, 255, 0.63);
+    text-shadow: 0 0px 15px rgba(255, 255, 255, 0.918);
     z-index: 100;
     font-family: "BBH Bogle", sans-serif;
     font-style: italic;
@@ -154,7 +160,7 @@ a, a:active, a:hover, a:visited {
 .item{
     font-family: "Bebas Neue", cursive;
     width: 40vw;
-    height: 27vh;
+    height: 20vh;
     font-size: 0.9rem;
     background-image: linear-gradient(to bottom,rgb(255, 0, 0), rgba(255, 0, 0, 0.634), rgba(91, 0, 0, 0.478) 100%);
     justify-content: center;
@@ -165,10 +171,10 @@ a, a:active, a:hover, a:visited {
     padding-top: 15px;
     padding-left: 30px;
     padding-right: 30px;
-    box-shadow: 0 0px 10px rgba(255, 255, 255, 0.694);
+    box-shadow: 0 0 5px white ,inset 0 0 5px rgb(255, 255, 255);
     transition: all 0.7s ease;
     animation: blurry 1.5s ease-out forwards;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.776);
 }
 .txtitem>h1{
     text-shadow: 0 0 10px rgba(116, 116, 116, 0.146);
@@ -196,26 +202,33 @@ a, a:hover, a:active, a:visited{
         box-sizing: border-box;
         column-gap: 1rem;
         padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.489);
     }
     .itemsbar[style] { margin-right: 0 !important; }
 
     #imgcontainer { height: 220px; }
 
-    #title { font-size: 2rem; }
-    #title h1 { line-height: 5rem; }
-    .italianno { font-size: 8rem !important; }
+    #title { font-size: 1rem; }
+    #title h1 { line-height: 2rem; }
+    .italianno { font-size: 5rem !important; z-index: 50;}
 
-    #container { padding: 0 5%; }
+    #container { padding: 0 5%; transform: translateY(-10vh);}
     .item {
         width: 85vw;
         height: auto;
-        min-height: 200px;
+        min-height: 100px;
         box-sizing: border-box;
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 20px;
-        border-radius: 70px;
+        border-radius: 30px;
         word-break: normal;
+    }
+    .txtitem, a>p{
+        font-size: 0.9rem;
+    }
+    .txtitem>h1{
+        font-size: 1.3rem;
     }
 
 	#preview {
@@ -255,10 +268,19 @@ a, a:hover, a:active, a:visited{
 		font-size: 1.3rem;
 		cursor: pointer;
 	}
+
+    #imgcontainer {
+		transform: none;
+		height: auto;
+	}
 	
 	#imgbg {
-        object-position: right center;
-    }
+		content: url("mobileSites.png");
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+		display: block;
+	}
 }
 
 </style>
@@ -286,17 +308,18 @@ a, a:hover, a:active, a:visited{
         </a>
     </header>
     <div id="imgcontainer">
-        <img id="imgbg" src="sitesbg3.jpg">
+        <img id="imgbg" src="sitesbg3.png">
     </div>
-
-    <span id="title">
-        <h1 style="text-align: center;">SITES DE <span class="italianno" style="font-size: 10rem; color: red; text-shadow: 0 0 10px red;">Geografia </span> DE DS.</h1>
-    </span>
+    <div id="forTitle">
+        <span id="title">
+            <h1 style="text-align: center;">SITES DE <span class="italianno" style="font-size: 10rem; color: red; text-shadow: 0 0 10px red;">Geografia </span> DE DS.</h1>
+        </span>
+    </div>
     <br>
     <br>
     <br>
     <div id="container">
-        <!--ITEM-->
+        <!--ITEM 1-->
         <div class="item">
             <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
                 <div class="txtitem">
@@ -306,128 +329,77 @@ a, a:hover, a:active, a:visited{
             </a>
             <div class="txtitem">
                 <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
-                    <h1>&nbsp;🔍︎</h1>
-                    <p>Visualizar Prévia</p>
+                    <p>🔍︎ Visualizar Prévia</p>
                 </a>
             </div>
         </div>
-        <!--ITEM-->
+        <!--ITEM 2-->
         <div class="item">
-            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+            <a href="https://wxluis1n.github.io/Cerrado-Geografia/" target="_blank">
                 <div class="txtitem">
-                    <h1>Domínio Amazônico</h1>
-                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                    <h1>Cerrado</h1>
+                    <p>DEVs:Luís F., Pedro H.N.A, Marcos, Ryan, Gustavo Cruz, Gabriel G., Murilo</p>
                 </div>
             </a>
             <div class="txtitem">
-                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
-                        <h1>&nbsp;🔍︎</h1>
-                        <p>Visualizar Prévia</p>
+                <a href="https://wxluis1n.github.io/Cerrado-Geografia/" target="content">
+                    <p>🔍︎ Visualizar Prévia</p>
                 </a>
             </div>
         </div>
-        <!--ITEM-->
+        <!--ITEM 3-->
         <div class="item">
-            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+            <a href="https://groupfive073-web.github.io/Mares-de-Morros/" target="_blank">
                 <div class="txtitem">
-                    <h1>Domínio Amazônico</h1>
-                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                    <h1>Mares de Morros</h1>
+                    <p>DEVs:Camille Veloso, Gabriel Moura, Maryane Vitória, Miqueias Lima e Sophia Silva</p>
                 </div>
             </a>
             <div class="txtitem">
-                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
-                        <h1>&nbsp;🔍︎</h1>
-                        <p>Visualizar Prévia</p>
+                <a href="https://groupfive073-web.github.io/Mares-de-Morros/" target="content">
+                    <p>🔍︎ Visualizar Prévia</p>
                 </a>
             </div>
         </div>
-        <!--ITEM-->
+        <!--ITEM 4-->
         <div class="item">
-            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+            <a href="https://araucarias.netlify.app" target="_blank">
                 <div class="txtitem">
-                    <h1>Domínio Amazônico</h1>
-                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                    <h1>Araucárias</h1>
+                    <p>DEVs:Alex Munhoz, Alisson Munhoz, Carlos Rodrigues, Giulia Nascimento, Lorena Vasconcelos & Yasmin Paiva</p>
                 </div>
             </a>
             <div class="txtitem">
-                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
-                        <h1>&nbsp;🔍︎</h1>
-                        <p>Visualizar Prévia</p>
+                <a href="https://araucarias.netlify.app" target="content">
+                    <p>🔍︎ Visualizar Prévia</p>
                 </a>
             </div>
         </div>
-        <!--ITEM-->
+        <!--ITEM 5-->
         <div class="item">
-            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+            <a href="https://lucasdaojr-maker.github.io/pradaria/" target="_blank">
                 <div class="txtitem">
-                    <h1>Domínio Amazônico</h1>
-                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                    <h1>Pradaria</h1>
+                    <p>DEVs:Lucas Silva Junior, Caio Ferreira Correia, Renato Chaves, Gustavo Prado Lisboa, Nikolas Pereira</p>
                 </div>
             </a>
             <div class="txtitem">
-                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
-                    <h1>&nbsp;🔍︎</h1>
-                    <p>Visualizar Prévia</p>
+                <a href="https://lucasdaojr-maker.github.io/pradaria/" target="content">
+                    <p>🔍︎ Visualizar Prévia</p>
                 </a>
             </div>
         </div>
-        <!--ITEM-->
+        <!--ITEM 6-->
         <div class="item">
-            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
+            <a href="https://gabritss.github.io/geo/" target="_blank">
                 <div class="txtitem">
-                    <h1>Domínio Amazônico</h1>
-                    <p>DEVs:Dudu, Cheetos & Yago</p>
+                    <h1>Pantanal</h1>
+                    <p>DEVs:Enzo de Almeida Magalhães,Pedro Henrique Ramos, Luiz Eduardo de Morais Barbosa</p>
                 </div>
             </a>
             <div class="txtitem">
-                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
-                        <h1>&nbsp;🔍︎</h1>
-                        <p>Visualizar Prévia</p>
-                </a>
-            </div>
-        </div>
-        <!--ITEM-->
-        <div class="item">
-            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
-                <div class="txtitem">
-                    <h1>Domínio Amazônico</h1>
-                    <p>Visualizar Prévia</p>
-                </div>
-            </a>
-            <div class="txtitem">
-                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
-                        <h1>&nbsp;🔍︎</h1>
-                        <p>Visualizar Prévia</p>
-                </a>
-            </div>
-        </div>
-        <!--ITEM-->
-        <div class="item">
-            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
-                <div class="txtitem">
-                    <h1>Domínio Amazônico</h1>
-                    <p>DEVs:Dudu, Cheetos & Yago</p>
-                </div>
-            </a>
-            <div class="txtitem">
-                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
-                        <h1>&nbsp;🔍︎</h1>
-                        <p>Visualizar Prévia</p>
-                </a>
-            </div>
-        </div>
-        <!--ITEM-->
-        <div class="item">
-            <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="_blank">
-                <div class="txtitem">
-                    <h1>Domínio Amazônico</h1>
-                    <p>DEVs:Dudu, Cheetos & Yago</p>
-                </div>
-            </a>
-            <div class="txtitem">
-                <a href="https://guilhermevictorss.github.io/DominioAmazonico/" target="content">
-                        <h1>&nbsp;🔍︎</h1>
-                        <<p>Visualizar Prévia</p>
+                <a href="https://gabritss.github.io/geo/" target="content">
+                    <p>🔍︎ Visualizar Prévia</p>
                 </a>
             </div>
         </div>
