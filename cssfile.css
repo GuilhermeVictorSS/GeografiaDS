@@ -231,6 +231,7 @@ marquee{
     column-gap: 2%;
 }
 .itempf{
+    position: relative;
     width: 30vw;
     height: 30vh;
     justify-content: center;
@@ -250,19 +251,22 @@ marquee{
     filter: brightness(0.9);
 }
 .txtpf{
-    width: 20vw;
-    height: 90%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    box-sizing: border-box;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.949) 30%, transparent 90%);
     border-radius: 30px;
-    transform: translateY(-60px);
     z-index: 100;
     display: flex;
-    font-size: 0.7rem;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.8rem;
     color: rgba(255, 255, 255, 0.931);
     padding-left: 35px;
     padding-right: 45px;
-    justify-content: top;
-    column-gap: 3%;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 1px;
     font-weight: bold;
@@ -271,15 +275,21 @@ marquee{
 .txtpf>p{
     opacity: 0;
     transition: all 0.5s ease;
-    line-height: 15px;
-    font-size: 0.8rem;
+    line-height: 1.2;
+    font-size: 1.5rem;
+    margin: 0;
     font-style: italic;
     font-family: "Bebas Neue", sans-serif;
     letter-spacing: 1px;
-
 }
-.txtpf>p:hover{
-    opacity: 1;
+.txtpf>h1{
+    font-size: 2.4rem;
+    margin: 0 0 10px;
+}
+@media (hover: hover) {
+    .itempf:hover .txtpf>p{
+        opacity: 1;
+    }
 }
 @keyframes floating {
   0%, 100% {
@@ -292,13 +302,16 @@ marquee{
 #floating{
     animation: floating 3s ease-in-out infinite;
 }
-
+.icon{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
 .icon>img{
     height: 80px;
     width: 80px;
     border-radius: 100px;
-    transform: translate(24vw,-39vh);
-    z-index: 1000;
     overflow: hidden;
     box-shadow: 0 10px 15px black;
 }
@@ -488,5 +501,15 @@ body.escuro #title{
 		height: auto;
 		object-fit: contain;
 		display: block;
+	}
+	.txtpf > h1 {
+    font-size: 2rem;
+    margin: 0 0 6px;
+	}
+
+	.txtpf > p {
+		opacity: 1;
+		font-size: 1.3rem;
+		line-height: 1.2;
 	}
 }
