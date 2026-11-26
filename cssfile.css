@@ -541,7 +541,7 @@ body.escuro #title{
         padding: 0 4vh 4vh 4vh;
     }
     #endTxt{
-        transform: translateY(-10vh);
+        transform: translateY(-8vh);
     }
     #endTxt>h1, #endTxt>p{
         text-align: center;
