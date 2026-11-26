@@ -548,8 +548,8 @@ body.escuro #title{
         font-size: 0.9rem;
     }
     #endCont>img{
-        width: 30vh;
-        height: 30vh;
+        width: 10vh;
+        height: 10vh;
         display: block;
         margin: auto;
     }
