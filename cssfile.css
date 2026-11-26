@@ -479,14 +479,14 @@ body.escuro #title{
     }
 	#imgcontainer {
 		transform: none;
-		height: auto;          /* a altura passa a seguir a imagem */
+		height: auto;
 	}
 	
 	#imgbg {
 		content: url("geomobile.jpg");
 		width: 100%;
-		height: auto;          /* mantém a proporção original */
-		object-fit: contain;   /* garante que nada seja cortado */
+		height: auto;
+		object-fit: contain;
 		display: block;
 	}
 }
