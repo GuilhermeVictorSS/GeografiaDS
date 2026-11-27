@@ -235,6 +235,7 @@ marquee{
 }
 .itempf{
     position: relative;
+    isolation: isolate;
     width: 30vw;
     height: 30vh;
     justify-content: center;
@@ -262,7 +263,7 @@ marquee{
     box-sizing: border-box;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.949) 30%, transparent 90%);
     border-radius: 30px;
-    z-index: 100;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -309,7 +310,7 @@ marquee{
     position: absolute;
     top: 15px;
     right: 15px;
-    z-index: 1000;
+    z-index: 2;
 }
 .icon>img{
     height: 80px;
@@ -320,16 +321,39 @@ marquee{
 }
 #area3{
     background-color: black;
+    padding: 8vh 0;
 }
 #endCont{
     display: flex;
-    padding-left: 1vw;
+    align-items: center;
+    padding-left: 3vw;
     padding-right: 3vw;
     color: white;
     column-gap: 3vw;
 }
+#endTxt{
+    background-color: rgb(24, 24, 24);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    padding: 2vw 3vw;
+}
+#endTxt>h1{
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 2.8rem;
+    margin: 0 0 20px;
+    line-height: 1.1;
+}
 #endTxt>p{
     font-style: italic;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+.destaque{
+    color: white;
+    font-weight: 700;
+    font-style: normal;
 }
 #endCont>img{
     width: 30vw;
@@ -372,7 +396,7 @@ body.escuro .itemMarq, body.escuro .itempf {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 100;
+    z-index: 1500;
     padding: 12px 22px;
     font-family: "Open Sans", sans-serif;
     font-size: 1rem;
@@ -535,18 +559,23 @@ body.escuro #title{
 		font-size: 1.3rem;
 		line-height: 1.2;
 	}
-    #endCont{
-        display: block;
-        justify-content: center;
-        padding: 0 4vh 4vh 4vh;
-    }
+	#endCont{
+		display: block;
+		padding: 0 5vw;
+	}
     #endTxt{
-        transform: translateY(-8vh);
-    }
-    #endTxt>h1, #endTxt>p{
-        text-align: center;
-        font-size: 0.9rem;
-    }
+		transform: none;
+		padding: 20px;
+		margin-top: 20px;
+	}
+	#endTxt>h1{
+		font-size: 1.6rem;
+		text-align: center;
+	}
+	#endTxt>p{
+		font-size: 1rem;
+		text-align: center;
+	}
     #endCont>img{
         width: 30vh;
         height: 30vh;
